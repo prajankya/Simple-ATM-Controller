@@ -47,6 +47,14 @@ long long AccountType::GetBalance() {
 bool AccountType::AddTransaction(const Transaction& transaction) {
     Validate();
 
+    // Test Limits
+    if (transaction.amount > 0 && balance > 0) {
+        if (balance > LLONG_MAX - transaction.amount) {
+            // max limit
+            return false;
+        }
+    }  // no need for other three cases, as it will reduce the size of number
+
     // If balance does not go below zero
     if (balance + transaction.amount >= 0) {
         transactions.emplace_back(transaction.amount);

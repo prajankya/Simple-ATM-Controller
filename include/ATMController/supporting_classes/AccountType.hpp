@@ -1,6 +1,7 @@
 #ifndef __ACCOUNT_TYPE_HPP__
 #define __ACCOUNT_TYPE_HPP__
 
+#include <limits.h>
 #include <ctime>
 #include <iostream>
 #include <stdexcept>
@@ -55,7 +56,8 @@ public:
      *
      * @param transaction to add
      * @return true if Transaction was successful
-     * @return false if not enough balance
+     * @return false if not enough balance or total is more than size of long
+     * long int
      */
     bool AddTransaction(const Transaction& transaction);
 };

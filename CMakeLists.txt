@@ -37,7 +37,7 @@ set(CMAKE_MACOSX_RPATH 0)
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 
-add_subdirectory(src)
+include_directories(include)
 
 
 ############## Tests ##############
@@ -57,8 +57,6 @@ endif(IS_DEBUG_MODE)
 
 if(PACKAGE_TESTS)
   enable_testing()
-
-  add_subdirectory(tests)
 endif(PACKAGE_TESTS)
 
 
@@ -87,3 +85,8 @@ if (BUILD_DOC)
     message("Doxygen need to be installed to generate the doxygen documentation")
   endif (DOXYGEN_FOUND)
 endif(BUILD_DOC)
+
+
+
+####
+add_subdirectory(src)

@@ -6,11 +6,11 @@
 #include "ATMController/supporting_classes/AccountType.hpp"
 
 TEST(AccountType, InitialDeposit) {
-    EXPECT_NO_THROW(AccountType actype(11));
+    EXPECT_NO_THROW(AccountType(11));
 };
 
 TEST(AccountType, NegativeInitialDeposit) {
-    EXPECT_ANY_THROW(AccountType actype(-10));
+    EXPECT_ANY_THROW(AccountType(-10));
 };
 
 TEST(AccountType, GetBalance) {
@@ -67,7 +67,7 @@ TEST(AccountType, MAXLimit) {
     EXPECT_FALSE(actype.AddTransaction(Transaction(1)));
 }
 
-// Cannot do anything to detect this, as eventually its a valid value
-TEST(AccountType, MINLimit_overflow) {
-    EXPECT_NO_THROW(AccountType(LLONG_MIN - 1));
-}
+// // Cannot do anything to detect this, as eventually its a valid value
+// TEST(AccountType, MINLimit_overflow) {
+//     EXPECT_NO_THROW(AccountType(LLONG_MIN - 1));
+// }

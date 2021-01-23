@@ -2,6 +2,7 @@
 #define __TRANSACTION_HPP__
 
 #include <ctime>
+#include <stdexcept>
 #include <string>
 
 /**
@@ -9,25 +10,36 @@
  *
  */
 
-class Transaction {
-private:
+struct Transaction {
     const long long amount;
     const std::time_t at;
 
-public:
+    /**
+     * @brief Create a new Transaction
+     *
+     * @param amount of Transaction
+     * "at" time will default to current time
+     */
+    Transaction(long long amount);
+
     /**
      * @brief Create a new Transaction
      *
      * @param amount of the Transaction
-     * @param at time of the Trasaction
+     * @param at time of the Transaction
      */
-    Transaction(long long&& amount, const std::time_t&& at);
+    Transaction(long long amount, std::time_t at);
+
+    // move constructor should be available, default is fine
+    Transaction(Transaction&&) = default;
+
+    Transaction() = delete;
 
     // cannot copy a transaction
-    Transaction(const Transaction&&) = delete;
+    Transaction(const Transaction&) = delete;
 
     // no assignment
-    // Transaction& operator=(const Transaction&) = delete;
+    Transaction& operator=(const Transaction&) = delete;
 };
 
 #endif

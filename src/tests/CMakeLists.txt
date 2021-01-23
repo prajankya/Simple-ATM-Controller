@@ -1,3 +1,5 @@
+set(GOOGLE_TEST_INDIVIDUAL true)
+
 # Get GoogleTest
 include(AddGoogleTest)
 
@@ -40,4 +42,6 @@ set_target_properties(gmock PROPERTIES FOLDER extern)
 set_target_properties(gmock_main PROPERTIES FOLDER extern)
 
 
-add_googletest(supporting_classes.Transaction supporting_classes/Transaction.cpp)
+add_googletest(run_test
+        supporting_classes/Transaction.cpp
+        supporting_classes/AccountType.cpp)

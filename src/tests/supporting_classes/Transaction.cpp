@@ -6,7 +6,11 @@
 #include "ATMController/supporting_classes/Transaction.hpp"
 
 TEST(Transaction, CreateNewTransaction) {
-    Transaction(0, std::time(0));
+    Transaction t(10, std::time(0));
 
-    EXPECT_TRUE(true);
+    EXPECT_EQ(t.amount, 10);
+};
+
+TEST(Transaction, EmptyTransaction) {
+    EXPECT_ANY_THROW(Transaction(0));
 };

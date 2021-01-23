@@ -92,7 +92,7 @@ bool Account::Deposit(std::string pin, Account::TYPE type, long long amount) {
 /*************************/
 /*************************/
 
-long long Account::Balance(std::string pin, Account::TYPE type) {
+long long Account::GetBalance(std::string pin, Account::TYPE type) {
     if (!CheckPin(pin)) {
         throw std::invalid_argument("Invalid Pin!");
     }

@@ -80,7 +80,7 @@ public:
      * @return long long balance in the account
      * @throws invalid_argument if Pin is incorrect
      */
-    long long Balance(std::string pin, Account::TYPE type);
+    long long GetBalance(std::string pin, Account::TYPE type);
 
     /**
      * @brief Allows to check if the pin is valid for the current account

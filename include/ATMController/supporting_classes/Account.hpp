@@ -3,6 +3,8 @@
 
 #include <math.h>
 #include <ctime>
+#include <functional>
+#include <regex>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -12,7 +14,7 @@
 class Account {
 private:
     const std::string cardNumber;
-    unsigned long pin;
+    std::size_t pin_hash;
 
     AccountType saving;
     AccountType checking;
@@ -34,24 +36,14 @@ public:
      *
      * @param cardNumber
      * @param pin for card
-     * defaults saving balance to 0
-     * defaults checking balance to 0
-     */
-    Account(const std::string cardNumber, unsigned long pin);
-
-    /**
-     * @brief Create a new Account
-     *
-     * @param cardNumber
-     * @param pin for card
-     * @param saving is the initial balance set for saving account
-     * @param checking is the initial balance set for checking account
+     * @param saving initial balance for saving account(defaults to 0)
+     * @param checking initial balance for checking account(defaults to 0)
      */
     Account(
-      const std::string cardNumber,
-      unsigned long pin,
-      long long saving,
-      long long checking);
+      const std::string& cardNumber,
+      std::string pin,
+      long long saving = 0,
+      long long checking = 0);
 
     /**
      * @brief Withdraw from given @param amount
@@ -64,7 +56,7 @@ public:
      * @return false if not enough balance
      * @throws invalid_argument if Pin is incorrect
      */
-    bool Withdraw(unsigned long pin, enum ACCOUNT_TYPE type, long long amount);
+    bool Withdraw(std::string pin, enum ACCOUNT_TYPE type, long long amount);
 
     /**
      * @brief Deposit from given @param amount
@@ -77,7 +69,7 @@ public:
      * @return false if not enough balance
      * @throws invalid_argument if Pin is incorrect
      */
-    bool Deposit(unsigned long pin, enum ACCOUNT_TYPE type, long long amount);
+    bool Deposit(std::string pin, enum ACCOUNT_TYPE type, long long amount);
 
     /**
      * @brief Get Balance of the given type of account
@@ -88,7 +80,16 @@ public:
      * @return long long balance in the account
      * @throws invalid_argument if Pin is incorrect
      */
-    long long Balance(unsigned long pin, enum ACCOUNT_TYPE type);
+    long long Balance(std::string pin, enum ACCOUNT_TYPE type);
+
+    /**
+     * @brief Allows to check if the pin is valid for the current account
+     *
+     * @param pin 6 digits long pin
+     * @return true if pin matches with the accounts pin
+     * @return false otherwise
+     */
+    bool CheckPin(std::string pin);
 };
 
 #endif

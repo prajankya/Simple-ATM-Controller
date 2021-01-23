@@ -39,3 +39,69 @@ Account::Account(
 bool Account::CheckPin(std::string pin) {
     return std::hash<std::string>{}(pin) == pin_hash;
 }
+
+/*************************/
+/*************************/
+
+bool Account::Withdraw(std::string pin, Account::TYPE type, long long amount) {
+    if (!CheckPin(pin)) {
+        throw std::invalid_argument("Invalid Pin!");
+    }
+
+    if (amount < 0) {
+        throw std::invalid_argument("Cannot withdraw negative amount!");
+    } else if (amount == 0) {
+        throw std::invalid_argument("Cannot withdraw zero amount!");
+    }
+
+    // Convert to negative, to withdraw
+    amount = -amount;
+
+    if (type == TYPE::TYPE_CHECKING) {
+        return checking.AddTransaction(Transaction(amount));
+    } else if (type == TYPE::TYPE_SAVING) {
+        return saving.AddTransaction(Transaction(amount));
+    } else {
+        throw std::invalid_argument("Invalid Account Type!");
+    }
+}
+
+/*************************/
+/*************************/
+
+bool Account::Deposit(std::string pin, Account::TYPE type, long long amount) {
+    if (!CheckPin(pin)) {
+        throw std::invalid_argument("Invalid Pin!");
+    }
+
+    if (amount < 0) {
+        throw std::invalid_argument("Cannot Deposit negative amount!");
+    } else if (amount == 0) {
+        throw std::invalid_argument("Cannot Deposit zero amount!");
+    }
+
+    if (type == TYPE::TYPE_CHECKING) {
+        return checking.AddTransaction(Transaction(amount));
+    } else if (type == TYPE::TYPE_SAVING) {
+        return saving.AddTransaction(Transaction(amount));
+    } else {
+        throw std::invalid_argument("Invalid Account Type!");
+    }
+}
+
+/*************************/
+/*************************/
+
+long long Account::Balance(std::string pin, Account::TYPE type) {
+    if (!CheckPin(pin)) {
+        throw std::invalid_argument("Invalid Pin!");
+    }
+
+    if (type == TYPE::TYPE_CHECKING) {
+        return checking.GetBalance();
+    } else if (type == TYPE::TYPE_SAVING) {
+        return saving.GetBalance();
+    } else {
+        throw std::invalid_argument("Invalid Account Type!");
+    }
+}

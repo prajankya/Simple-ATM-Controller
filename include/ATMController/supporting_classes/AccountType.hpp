@@ -1,5 +1,5 @@
-#ifndef __ACCOUNT_TYPE_HPP__
-#define __ACCOUNT_TYPE_HPP__
+#ifndef __ACCOUNTTYPE_HPP__
+#define __ACCOUNTTYPE_HPP__
 
 #include <limits.h>
 #include <ctime>

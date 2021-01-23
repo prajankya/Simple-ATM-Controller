@@ -20,7 +20,7 @@ private:
     AccountType checking;
 
 public:
-    enum class ACCOUNT_TYPE { TYPE_SAVING, TYPE_CHECKING };
+    enum class TYPE { TYPE_SAVING, TYPE_CHECKING };
 
     // Empty constructor
     Account() = delete;
@@ -56,7 +56,7 @@ public:
      * @return false if not enough balance
      * @throws invalid_argument if Pin is incorrect
      */
-    bool Withdraw(std::string pin, enum ACCOUNT_TYPE type, long long amount);
+    bool Withdraw(std::string pin, enum TYPE type, long long amount);
 
     /**
      * @brief Deposit from given @param amount
@@ -69,18 +69,18 @@ public:
      * @return false if not enough balance
      * @throws invalid_argument if Pin is incorrect
      */
-    bool Deposit(std::string pin, enum ACCOUNT_TYPE type, long long amount);
+    bool Deposit(std::string pin, Account::TYPE type, long long amount);
 
     /**
      * @brief Get Balance of the given type of account
      *
      * @param pin Card Pin
-     * @param type of account (can be either Account::TYPE_SAVING or
-     * Account::TYPE_CHECKING)
+     * @param type of account (can be either Account::TYPE::TYPE_SAVING
+     * or Account::TYPE::TYPE_CHECKING)
      * @return long long balance in the account
      * @throws invalid_argument if Pin is incorrect
      */
-    long long Balance(std::string pin, enum ACCOUNT_TYPE type);
+    long long Balance(std::string pin, Account::TYPE type);
 
     /**
      * @brief Allows to check if the pin is valid for the current account

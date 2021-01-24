@@ -91,3 +91,12 @@ TEST(Bank, CheckPin) {
     EXPECT_TRUE(bank.CheckPin("123456789012", "123456"));
     EXPECT_FALSE(bank.CheckPin("123456789012", "122334"));
 };
+
+TEST(Bank, CheckAccount) {
+    Bank bank;
+
+    EXPECT_NO_THROW(bank.AddAccount(Account("123456789012", "123456", 10, 20)));
+
+    EXPECT_TRUE(bank.CheckAccount("123456789012"));
+    EXPECT_FALSE(bank.CheckAccount("123456789555"));
+};

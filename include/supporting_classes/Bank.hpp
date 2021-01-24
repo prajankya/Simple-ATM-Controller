@@ -74,6 +74,15 @@ public:
      * @return false otherwise
      */
     bool CheckPin(std::string cardNumber, std::string pin);
+
+    /**
+     * @brief Allows to check if a cardNumber is connected to known accountss
+     *
+     * @param cardNumber Cardnumber
+     * @return true if cardnumber is found
+     * @return false otherwise
+     */
+    bool CheckAccount(std::string cardNumber);
 };
 
 #endif

@@ -15,7 +15,7 @@ class Account {
 public:
     const std::string cardNumber;
 
-protected:
+private:
     std::size_t pin_hash;
 
     AccountType saving;

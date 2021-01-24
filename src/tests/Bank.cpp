@@ -1,8 +1,8 @@
 
 #include "gtest/gtest.h"
 
-#include "ATMController/supporting_classes/Account.hpp"
-#include "ATMController/supporting_classes/Bank.hpp"
+#include "supporting_classes/Account.hpp"
+#include "supporting_classes/Bank.hpp"
 
 TEST(Bank, AddAccount) {
     Bank bank;

@@ -46,4 +46,5 @@ add_googletest(run_test
         Transaction.cpp
         AccountType.cpp
         Account.cpp
-        Bank.cpp)
+        Bank.cpp
+        ATMController.cpp)

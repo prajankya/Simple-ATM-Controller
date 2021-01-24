@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 
-#include "ATMController/supporting_classes/Transaction.hpp"
+#include "supporting_classes/Transaction.hpp"
 
 TEST(Transaction, CreateNewTransaction) {
     Transaction t(10, std::time(0));

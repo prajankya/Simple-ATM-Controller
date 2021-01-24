@@ -70,13 +70,13 @@ TEST(Account, CheckWrongPin) {
 TEST(Account, WithdrawSaving) {
     Account ac("123456789012", "123456", 100, 2);
 
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 100));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 100));
 };
 
 TEST(Account, WithdrawSavingInvalid) {
     Account ac("123456789012", "123456", 100, 2);
 
-    EXPECT_FALSE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 101));
+    EXPECT_ANY_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 101));
 };
 
 TEST(Account, WithdrawSavingNegative) {
@@ -88,21 +88,21 @@ TEST(Account, WithdrawSavingNegative) {
 TEST(Account, WithdrawSavingMultiple) {
     Account ac("123456789012", "123456", 100, 2);
 
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 50));
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 50));
-    EXPECT_FALSE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 1));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 50));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 50));
+    EXPECT_ANY_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 1));
 };
 
 TEST(Account, WithdrawChecking) {
     Account ac("123456789012", "123456", 1, 100);
 
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 100));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 100));
 };
 
 TEST(Account, WithdrawCheckingInvalid) {
     Account ac("123456789012", "123456", 1, 100);
 
-    EXPECT_FALSE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 101));
+    EXPECT_ANY_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 101));
 };
 
 TEST(Account, WithdrawCheckingNegative) {
@@ -114,21 +114,21 @@ TEST(Account, WithdrawCheckingNegative) {
 TEST(Account, WithdrawCheckingMultiple) {
     Account ac("123456789012", "123456", 1, 100);
 
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 50));
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 50));
-    EXPECT_FALSE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 1));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 50));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 50));
+    EXPECT_ANY_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 1));
 };
 
 TEST(Account, DepositSaving) {
     Account ac("123456789012", "123456", 100, 2);
 
-    EXPECT_TRUE(ac.Deposit("123456", Account::TYPE::TYPE_SAVING, 100));
+    EXPECT_NO_THROW(ac.Deposit("123456", Account::TYPE::TYPE_SAVING, 100));
 };
 
 TEST(Account, DepositSavingInvalid) {
     Account ac("123456789012", "123456", LLONG_MAX, 2);
 
-    EXPECT_FALSE(ac.Deposit("123456", Account::TYPE::TYPE_SAVING, 1));
+    EXPECT_ANY_THROW(ac.Deposit("123456", Account::TYPE::TYPE_SAVING, 1));
 };
 
 TEST(Account, DepositSavingNegative) {
@@ -140,13 +140,13 @@ TEST(Account, DepositSavingNegative) {
 TEST(Account, DepositChecking) {
     Account ac("123456789012", "123456", 1, 100);
 
-    EXPECT_TRUE(ac.Deposit("123456", Account::TYPE::TYPE_CHECKING, 100));
+    EXPECT_NO_THROW(ac.Deposit("123456", Account::TYPE::TYPE_CHECKING, 100));
 };
 
 TEST(Account, DepositCheckingInvalid) {
     Account ac("123456789012", "123456", 1, LLONG_MAX);
 
-    EXPECT_FALSE(ac.Deposit("123456", Account::TYPE::TYPE_CHECKING, 1));
+    EXPECT_ANY_THROW(ac.Deposit("123456", Account::TYPE::TYPE_CHECKING, 1));
 };
 
 TEST(Account, DepositCheckingNegative) {
@@ -160,13 +160,13 @@ TEST(Account, CheckBalanceSaving) {
 
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_SAVING), 100);
 
-    EXPECT_TRUE(ac.Deposit("123456", Account::TYPE::TYPE_SAVING, 200));
+    EXPECT_NO_THROW(ac.Deposit("123456", Account::TYPE::TYPE_SAVING, 200));
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_SAVING), 300);
 
-    EXPECT_FALSE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 400));
+    EXPECT_ANY_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 400));
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_SAVING), 300);
 
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 300));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_SAVING, 300));
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_SAVING), 0);
 };
 
@@ -175,12 +175,12 @@ TEST(Account, CheckBalanceChecking) {
 
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_CHECKING), 100);
 
-    EXPECT_TRUE(ac.Deposit("123456", Account::TYPE::TYPE_CHECKING, 200));
+    EXPECT_NO_THROW(ac.Deposit("123456", Account::TYPE::TYPE_CHECKING, 200));
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_CHECKING), 300);
 
-    EXPECT_FALSE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 400));
+    EXPECT_ANY_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 400));
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_CHECKING), 300);
 
-    EXPECT_TRUE(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 300));
+    EXPECT_NO_THROW(ac.Withdraw("123456", Account::TYPE::TYPE_CHECKING, 300));
     EXPECT_EQ(ac.GetBalance("123456", Account::TYPE::TYPE_CHECKING), 0);
 };

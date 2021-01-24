@@ -12,8 +12,10 @@
 #include "AccountType.hpp"
 
 class Account {
-private:
+public:
     const std::string cardNumber;
+
+protected:
     std::size_t pin_hash;
 
     AccountType saving;
@@ -46,30 +48,34 @@ public:
       long long checking = 0);
 
     /**
-     * @brief Withdraw from given @param amount
-     *
-     * @param pin Card Pin
-     * @param type of account (can be either Account::TYPE_SAVING or
-     * Account::TYPE_CHECKING)
-     * @param amount amount to with draw
-     * @return true if the withdraw is successful
-     * @return false if not enough balance
-     * @throws invalid_argument if Pin is incorrect
+     * @brief Construct a new Account
+     * (Move Constructor)
      */
-    bool Withdraw(std::string pin, enum TYPE type, long long amount);
+    Account(Account&& other) = default;
 
     /**
-     * @brief Deposit from given @param amount
+     * @brief Withdraw @param amount from @param type
      *
      * @param pin Card Pin
      * @param type of account (can be either Account::TYPE_SAVING or
      * Account::TYPE_CHECKING)
      * @param amount amount to with draw
-     * @return true if the deposit is successful
-     * @return false if not enough balance
-     * @throws invalid_argument if Pin is incorrect
+     * @throws invalid_argument if Pin is incorrect or if account does not have
+     * sufficient balance
      */
-    bool Deposit(std::string pin, Account::TYPE type, long long amount);
+    void Withdraw(std::string pin, Account::TYPE type, long long amount);
+
+    /**
+     * @brief Deposit @param amount to @param type
+     *
+     * @param pin Card Pin
+     * @param type of account (can be either Account::TYPE_SAVING or
+     * Account::TYPE_CHECKING)
+     * @param amount amount to with draw
+     * @throws invalid_argument if Pin is incorrect or total is more than size
+     * of long long int
+     */
+    void Deposit(std::string pin, Account::TYPE type, long long amount);
 
     /**
      * @brief Get Balance of the given type of account

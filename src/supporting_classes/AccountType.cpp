@@ -44,14 +44,14 @@ long long AccountType::GetBalance() {
 /*************************/
 /*************************/
 
-bool AccountType::AddTransaction(const Transaction& transaction) {
+void AccountType::AddTransaction(const Transaction& transaction) {
     Validate();
 
     // Test Limits
     if (transaction.amount > 0 && balance > 0) {
         if (balance > LLONG_MAX - transaction.amount) {
             // max limit
-            return false;
+            throw std::invalid_argument("Account reached maximum limit !");
         }
     }  // no need for other three cases, as it will reduce the size of number
 
@@ -59,9 +59,10 @@ bool AccountType::AddTransaction(const Transaction& transaction) {
     if (balance + transaction.amount >= 0) {
         transactions.emplace_back(transaction.amount);
         Validate();
-        return true;
+        return;
     } else {
         // Not enough balance
-        return false;
+        throw std::invalid_argument(
+          "Account does not have sufficient balance !");
     }
 }

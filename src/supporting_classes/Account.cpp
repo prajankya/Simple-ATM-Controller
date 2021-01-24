@@ -9,7 +9,7 @@ Account::Account(
   long long saving,
   long long checking)
     : cardNumber(cardNumber), saving(saving), checking(checking) {
-    // Basic validate Card number
+    // Validate card number
     if (cardNumber.length() != 12) {
         throw std::invalid_argument("Card number should be 12 digits long");
     }
@@ -29,7 +29,7 @@ Account::Account(
         throw std::invalid_argument("Pin should contain only valid digits");
     }
 
-    // TODO: Using basic hash for simplicity sake
+    // Note: Using basic hash for simplicity sake
     pin_hash = std::hash<std::string>{}(pin);
 }
 
@@ -43,7 +43,7 @@ bool Account::CheckPin(std::string pin) {
 /*************************/
 /*************************/
 
-bool Account::Withdraw(std::string pin, Account::TYPE type, long long amount) {
+void Account::Withdraw(std::string pin, Account::TYPE type, long long amount) {
     if (!CheckPin(pin)) {
         throw std::invalid_argument("Invalid Pin!");
     }
@@ -69,7 +69,7 @@ bool Account::Withdraw(std::string pin, Account::TYPE type, long long amount) {
 /*************************/
 /*************************/
 
-bool Account::Deposit(std::string pin, Account::TYPE type, long long amount) {
+void Account::Deposit(std::string pin, Account::TYPE type, long long amount) {
     if (!CheckPin(pin)) {
         throw std::invalid_argument("Invalid Pin!");
     }

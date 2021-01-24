@@ -32,7 +32,7 @@ TEST(AccountType, ZeroInitialDeposit) {
 TEST(AccountType, CreditTransaction) {
     AccountType actype(123);
 
-    EXPECT_TRUE(actype.AddTransaction(Transaction(234)));
+    EXPECT_NO_THROW(actype.AddTransaction(Transaction(234)));
 
     EXPECT_EQ(actype.GetBalance(), 357);
 }
@@ -40,7 +40,7 @@ TEST(AccountType, CreditTransaction) {
 TEST(AccountType, DebitTransaction) {
     AccountType actype(123);
 
-    EXPECT_TRUE(actype.AddTransaction(Transaction(-100)));
+    EXPECT_NO_THROW(actype.AddTransaction(Transaction(-100)));
 
     EXPECT_EQ(actype.GetBalance(), 23);
 }
@@ -48,26 +48,21 @@ TEST(AccountType, DebitTransaction) {
 TEST(AccountType, MixedTransaction) {
     AccountType actype(123);
 
-    EXPECT_TRUE(actype.AddTransaction(Transaction(234)));
+    EXPECT_NO_THROW(actype.AddTransaction(Transaction(234)));
 
     EXPECT_EQ(actype.GetBalance(), 357);
 
-    EXPECT_FALSE(actype.AddTransaction(Transaction(-500)));
+    EXPECT_ANY_THROW(actype.AddTransaction(Transaction(-500)));
 
-    EXPECT_TRUE(actype.AddTransaction(Transaction(-300)));
+    EXPECT_NO_THROW(actype.AddTransaction(Transaction(-300)));
     EXPECT_EQ(actype.GetBalance(), 57);
 
-    EXPECT_TRUE(actype.AddTransaction(Transaction(-57)));
+    EXPECT_NO_THROW(actype.AddTransaction(Transaction(-57)));
     EXPECT_EQ(actype.GetBalance(), 0);
 }
 
 TEST(AccountType, MAXLimit) {
     AccountType actype(LLONG_MAX);
 
-    EXPECT_FALSE(actype.AddTransaction(Transaction(1)));
+    EXPECT_ANY_THROW(actype.AddTransaction(Transaction(1)));
 }
-
-// // Cannot do anything to detect this, as eventually its a valid value
-// TEST(AccountType, MINLimit_overflow) {
-//     EXPECT_NO_THROW(AccountType(LLONG_MIN - 1));
-// }

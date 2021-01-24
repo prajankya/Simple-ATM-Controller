@@ -1,6 +1,7 @@
-#ifndef __ACCOUNT_TYPE_HPP__
-#define __ACCOUNT_TYPE_HPP__
+#ifndef __ACCOUNTTYPE_HPP__
+#define __ACCOUNTTYPE_HPP__
 
+#include <limits.h>
 #include <ctime>
 #include <iostream>
 #include <stdexcept>
@@ -40,8 +41,11 @@ public:
     // No copy
     AccountType(const AccountType&) = delete;
 
-    // No assignment
-    AccountType& operator=(const AccountType&) = delete;
+    // Move constructor
+    AccountType(AccountType&&) = default;
+
+    // Move assignment
+    AccountType& operator=(AccountType&&) = default;
 
     /**
      * @brief Get the Balance of this account type
@@ -54,10 +58,10 @@ public:
      * @brief Add Transaction
      *
      * @param transaction to add
-     * @return true if Transaction was successful
-     * @return false if not enough balance
+     * @throws invalid_argument exception false if account does not have
+     * sufficient balance or total is more than size of long long int
      */
-    bool AddTransaction(const Transaction& transaction);
+    void AddTransaction(const Transaction& transaction);
 };
 
 #endif

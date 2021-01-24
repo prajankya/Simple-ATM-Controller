@@ -43,5 +43,7 @@ set_target_properties(gmock_main PROPERTIES FOLDER extern)
 
 
 add_googletest(run_test
-        supporting_classes/Transaction.cpp
-        supporting_classes/AccountType.cpp)
+        Transaction.cpp
+        AccountType.cpp
+        Account.cpp
+        Bank.cpp)

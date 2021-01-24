@@ -60,6 +60,10 @@ if(PACKAGE_TESTS)
 endif(PACKAGE_TESTS)
 
 
+###########################################
+
+add_subdirectory(src)
+
 ############## Documentation ##############
 
 option(BUILD_DOC "Build documentation" ON)
@@ -88,5 +92,3 @@ endif(BUILD_DOC)
 
 
 
-####
-add_subdirectory(src)

@@ -3,4 +3,4 @@
 /*************************/
 /*************************/
 
-ATMController::ATMController(const Bank& bank) : bank(bank) {}
+ATMController::ATMController(const Bank* bank_) : bankptr(bank_) {}

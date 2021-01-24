@@ -5,9 +5,10 @@
 
 class ATMController {
 public:
-    ATMController(const Bank& bank);
+    ATMController(const Bank* bank);
 
 private:
-    Bank bank;
+    // Ownership is outside ATMController
+    const Bank* bankptr;
 };
 #endif

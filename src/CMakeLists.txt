@@ -4,7 +4,8 @@ set(CPP_SOURCE
   supporting_classes/Transaction.cpp
   supporting_classes/AccountType.cpp
   supporting_classes/Account.cpp
-  supporting_classes/Bank.cpp)
+  supporting_classes/Bank.cpp
+  ATMController.cpp)
 
 add_library(my_lib ${CPP_SOURCE})
 

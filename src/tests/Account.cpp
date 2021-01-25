@@ -1,7 +1,7 @@
 
 #include "gtest/gtest.h"
 
-#include "ATMController/supporting_classes/Account.hpp"
+#include "supporting_classes/Account.hpp"
 
 TEST(Account, InitializeValid) {
     EXPECT_NO_THROW(Account("123456789012", "123456"));

@@ -1,4 +1,4 @@
-#include "ATMController/supporting_classes/AccountType.hpp"
+#include "supporting_classes/AccountType.hpp"
 
 /*************************/
 /*************************/

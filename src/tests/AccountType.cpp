@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 
-#include "ATMController/supporting_classes/AccountType.hpp"
+#include "supporting_classes/AccountType.hpp"
 
 TEST(AccountType, InitialDeposit) {
     EXPECT_NO_THROW(AccountType(11));

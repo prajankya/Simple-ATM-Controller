@@ -34,12 +34,6 @@ jobs:
       shell: bash
       run: ctest -C $BUILD_TYPE
 
-    - name: Generate documentation
-      working-directory: ${{github.workspace}}/build
-      shell: bash
-      run: doxygen Doxyfile
-
-
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment
       uses: peaceiris/actions-gh-pages@v3

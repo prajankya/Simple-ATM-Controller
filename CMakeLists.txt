@@ -42,20 +42,10 @@ include_directories(include)
 
 ############## Tests ##############
 
-option(PACKAGE_TESTS "Build the tests" OFF)
-
-string(TOUPPER "${CMAKE_BUILD_TYPE}" uppercase_CMAKE_BUILD_TYPE)
-
-if (uppercase_CMAKE_BUILD_TYPE STREQUAL "DEBUG")
-  set(IS_DEBUG_MODE True)
-endif()
-
-if (IS_DEBUG_MODE)
-  message(STATUS "======= Building all tests ========")
-  set(PACKAGE_TESTS ON)
-endif(IS_DEBUG_MODE)
+option(PACKAGE_TESTS "Build the tests" ON)
 
 if(PACKAGE_TESTS)
+  message(STATUS "======= Building all tests ========")
   enable_testing()
 endif(PACKAGE_TESTS)
 

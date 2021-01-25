@@ -35,8 +35,10 @@ jobs:
       run: ctest -C $BUILD_TYPE
 
     - name: Generate documentation
-      uses: mattnotmitt/doxygen-action@v1
       working-directory: ${{github.workspace}}/build
+      shell: bash
+      run: doxygen Doxyfile
+
 
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment

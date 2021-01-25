@@ -17,7 +17,7 @@ jobs:
       run: cmake -E make_directory ${{github.workspace}}/build
 
     - name: Install Dependencies
-      run: sudo apt-get install -y doxygen
+      run: sudo apt-get install -y doxygen graphviz
 
     - name: Configure CMake
       shell: bash

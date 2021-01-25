@@ -34,7 +34,7 @@ jobs:
     - name: Generate documentation
       uses: mattnotmitt/doxygen-action@v1
       with:
-          working-directory: build
+          working-directory: .
           doxyfile-path: ./Doxyfile
 
     # Deploy the HTML documentation to GitHub Pages

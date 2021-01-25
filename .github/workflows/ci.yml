@@ -16,9 +16,6 @@ jobs:
     - name: Create Build Environment
       run: cmake -E make_directory ${{github.workspace}}/build
 
-    - name: Install Dependencies
-      run: sudo apt-get install -y doxygen graphviz
-
     - name: Configure CMake
       shell: bash
       working-directory: ${{github.workspace}}/build
@@ -33,6 +30,11 @@ jobs:
       working-directory: ${{github.workspace}}/build
       shell: bash
       run: ctest -C $BUILD_TYPE
+
+    - name: Generate documentation
+      uses: mattnotmitt/doxygen-action@v1
+      with:
+          working-directory: build
 
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment

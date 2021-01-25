@@ -54,7 +54,7 @@ public:
     Account(Account&& other) = default;
 
     /**
-     * @brief Withdraw @param amount from @param type
+     * @brief Withdraw amount from type of account
      *
      * @param pin Card Pin
      * @param type of account (can be either Account::TYPE_SAVING or
@@ -66,7 +66,7 @@ public:
     void Withdraw(std::string pin, Account::TYPE type, long long amount);
 
     /**
-     * @brief Deposit @param amount to @param type
+     * @brief Deposit amount to type of account
      *
      * @param pin Card Pin
      * @param type of account (can be either Account::TYPE_SAVING or

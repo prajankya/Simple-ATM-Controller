@@ -19,7 +19,7 @@ class AccountType {
 private:
     void Validate();
 
-protected:
+private:
     long long balance = 0;
     std::vector<Transaction> transactions;
 

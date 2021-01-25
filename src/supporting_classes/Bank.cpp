@@ -75,3 +75,11 @@ bool Bank::CheckPin(std::string cardNumber, std::string pin) {
           "Account with given card number does not exist !");
     }
 }
+
+/*************************/
+/*************************/
+
+bool Bank::CheckAccount(std::string cardNumber) {
+    return accounts.find(std::hash<std::string>{}(cardNumber)) !=
+           accounts.end();
+}

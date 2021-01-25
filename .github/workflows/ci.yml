@@ -13,6 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Installing dependencies
+      run: sudo apt install doxygen graphviz
+
     - name: Create Build Environment
       run: cmake -E make_directory ${{github.workspace}}/build
 
@@ -33,9 +36,7 @@ jobs:
 
     - name: Generate documentation
       uses: mattnotmitt/doxygen-action@v1
-      with:
-          working-directory: build
-          doxyfile-path: 'Doxyfile'
+      working-directory: ${{github.workspace}}/build
 
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment

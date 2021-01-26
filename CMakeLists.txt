@@ -13,7 +13,7 @@ set(PATCH_VERSION 12)
 
 set(VERSION_STRING ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
-project(ATM_Controller LANGUAGES CXX)
+project(ATMController LANGUAGES CXX)
 
 message(STATUS "Building Simple ATM Controller: ${VERSION_STRING}")
 

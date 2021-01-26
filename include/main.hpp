@@ -51,9 +51,16 @@ struct menu_menu_item : menu_item {
         std::cin >> choice;
 
         if (0 < choice && choice <= items.size()) {
-            items[choice - 1]->run();
+            std::cout << "\033c";  // Clear screen
+            try {
+                items[choice - 1]->run();
+            } catch (const std::exception& e) {
+                std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
+            }
+
         } else if (choice == idx) {
-            return;  // exit
+            std::cout << "\033c";  // Clear screen
+            return;                // exit
         } else {
             std::cout << "\n\033[0;31m[ERROR] Invalid Choice:" << (choice - 1)
                       << "\033[0m\n";

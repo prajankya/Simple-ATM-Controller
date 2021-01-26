@@ -1,7 +1,7 @@
 # Simple-ATM-Controller
 Coding Assessment
 
-![Ubuntu](https://github.com/prajankya/Simple-ATM-Controller/workflows/Build%20and%20test/badge.svg)
+![Ubuntu](https://github.com/prajankya/Simple-ATM-Controller/workflows/Ubuntu/badge.svg)
 
 ![Demo SVG](https://raw.githubusercontent.com/prajankya/Simple-ATM-Controller/main/demo.svg)
 
@@ -17,7 +17,7 @@ Coding Assessment
 
 For Ubuntu
 ```shell
-sudo apt install gcc cmake doxygen git
+sudo apt install g++ cmake doxygen git
 ```
 
 For Mac OSX

@@ -3,9 +3,7 @@ Coding Assessment
 
 ![Ubuntu](https://github.com/prajankya/Simple-ATM-Controller/workflows/Build%20and%20test/badge.svg)
 
-
 ![Demo SVG](https://raw.githubusercontent.com/prajankya/Simple-ATM-Controller/main/demo.svg)
-
 
 ## Installing
 

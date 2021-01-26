@@ -1,0 +1,9 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node2" href="$classBank.html#aa0f6b03aa5383d1cd5bd877f7dcc88f9" title="Add a new Account (Only move constructor) " alt="" coords="131,5,262,32"/>
+<area shape="rect" id="node3" href="$classATMController.html#af446cdf61d051339db61abbdd839ebac" title="Insert Card. " alt="" coords="109,56,284,83"/>
+<area shape="rect" id="node6" href="$classATMController.html#a021bf77cda238dd68aede20818ecb5b4" title="Get the Current State of ATMController. " alt="" coords="113,107,280,133"/>
+<area shape="rect" id="node7" href="$classATMController.html#af0cf99bd0903ca5e4a1fa8dea63c020e" title="Entering the pin for the given card (using InsertCard(cardNumber)) " alt="" coords="115,157,279,184"/>
+<area shape="rect" id="node4" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="332,107,527,133"/>
+<area shape="rect" id="node5" href="$classBank.html#a325ab2b6f254d3896f913e3c23f664d2" title="Allows to check if a cardNumber is connected to known accountss. " alt="" coords="356,56,503,83"/>
+<area shape="rect" id="node8" href="$classBank.html#afef2b783c0d96fb8fb00d587c32d4097" title="Allows to check if the pin is valid for the account with cardNumber. " alt="" coords="371,157,488,184"/>
+</map>

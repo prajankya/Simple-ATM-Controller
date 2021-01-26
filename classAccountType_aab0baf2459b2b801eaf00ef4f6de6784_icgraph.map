@@ -1,0 +1,7 @@
+<map id="AccountType::AddTransaction" name="AccountType::AddTransaction">
+<area shape="rect" id="node2" href="$classAccount.html#a12dad91df031830606f190fe7655d5d3" title="Withdraw amount from type of account. " alt="" coords="252,5,385,32"/>
+<area shape="rect" id="node4" href="$classAccount.html#a893fb81b51cf44ad597f0b1b7feaf094" title="Deposit amount to type of account. " alt="" coords="257,56,380,83"/>
+<area shape="rect" id="node6" href="$tests_2AccountType_8cpp.html#add42541c9cd9ae8ab3e660519ea2626e" title="TEST" alt="" coords="291,107,347,133"/>
+<area shape="rect" id="node3" href="$tests_2Account_8cpp.html#a82daa7d576e7ae5d3b274e39a39292be" title="TEST" alt="" coords="433,5,489,32"/>
+<area shape="rect" id="node5" href="$tests_2Account_8cpp.html#a31028fcb183807d4912d2350cc1e887d" title="TEST" alt="" coords="433,56,489,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Bank::Deposit" name="Bank::Deposit">
+<area shape="rect" id="node2" href="$classATMController.html#ac81dfa7ab5e08db325ded04d2c43bd34" title="Deposit amount to the current account. " alt="" coords="159,31,317,57"/>
+<area shape="rect" id="node5" href="$tests_2Bank_8cpp.html#ad57b1145243a4741a55ec0080a295eb5" title="TEST" alt="" coords="210,81,266,108"/>
+<area shape="rect" id="node3" href="$tests_2ATMController_8cpp.html#aed94d5fad6751247e009b821cb7c57b9" title="TEST" alt="" coords="365,5,421,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="368,56,419,83"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="ATMController::StateToString" name="ATMController::StateToString">
+<area shape="rect" id="node2" href="$classATMController.html#af446cdf61d051339db61abbdd839ebac" title="Insert Card. " alt="" coords="260,31,435,57"/>
+<area shape="rect" id="node5" href="$classATMController.html#af0cf99bd0903ca5e4a1fa8dea63c020e" title="Entering the pin for the given card (using InsertCard(cardNumber)) " alt="" coords="265,81,429,108"/>
+<area shape="rect" id="node7" href="$classATMController.html#a66508b85220af98f1564af784dc4338f" title="Choose a type of account. " alt="" coords="248,132,447,159"/>
+<area shape="rect" id="node9" href="$classATMController.html#af434bb8b0bbfd1d2e0e0f1b6a7460b90" title="Get the Balance of the current account. " alt="" coords="256,183,439,209"/>
+<area shape="rect" id="node11" href="$classATMController.html#a2506be8e706a6a4a47c2da4078f67f2e" title="Withdraw amount from the current account. " alt="" coords="263,233,432,260"/>
+<area shape="rect" id="node13" href="$classATMController.html#ac81dfa7ab5e08db325ded04d2c43bd34" title="Deposit amount to the current account. " alt="" coords="268,284,427,311"/>
+<area shape="rect" id="node15" href="$tests_2ATMController_8cpp.html#ae0ab36529661d5859359350a693bb7e5" title="TEST" alt="" coords="319,335,375,361"/>
+<area shape="rect" id="node3" href="$tests_2ATMController_8cpp.html#a8d4f6dd4ccf7753aa0aeb563ac290825" title="TEST" alt="" coords="495,5,551,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="497,157,548,184"/>
+<area shape="rect" id="node6" href="$tests_2ATMController_8cpp.html#a2babb2483f541694d841da9d3f8460f9" title="TEST" alt="" coords="495,56,551,83"/>
+<area shape="rect" id="node8" href="$tests_2ATMController_8cpp.html#a770d4c9116c624895234dbe490b5869e" title="TEST" alt="" coords="495,107,551,133"/>
+<area shape="rect" id="node10" href="$tests_2ATMController_8cpp.html#aff6c4e93d1fccc31921e6fe7361de101" title="TEST" alt="" coords="495,208,551,235"/>
+<area shape="rect" id="node12" href="$tests_2ATMController_8cpp.html#a171f2b17edcbe9ad9c9a33aaea1d8374" title="TEST" alt="" coords="495,259,551,285"/>
+<area shape="rect" id="node14" href="$tests_2ATMController_8cpp.html#aed94d5fad6751247e009b821cb7c57b9" title="TEST" alt="" coords="495,309,551,336"/>
+</map>

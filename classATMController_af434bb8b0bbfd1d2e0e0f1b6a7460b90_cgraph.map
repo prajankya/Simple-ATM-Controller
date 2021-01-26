@@ -1,0 +1,4 @@
+<map id="ATMController::GetBalance" name="ATMController::GetBalance">
+<area shape="rect" id="node2" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="236,5,431,32"/>
+<area shape="rect" id="node3" href="$classBank.html#a00ba74161d70b3d35092dd3597c4ac21" title="Get Balance of type of account with cardNumber. " alt="" coords="269,56,397,83"/>
+</map>

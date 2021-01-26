@@ -1,0 +1,4 @@
+<map id="ATMController::EnterPin" name="ATMController::EnterPin">
+<area shape="rect" id="node2" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="217,5,412,32"/>
+<area shape="rect" id="node3" href="$classBank.html#afef2b783c0d96fb8fb00d587c32d4097" title="Allows to check if the pin is valid for the account with cardNumber. " alt="" coords="256,56,373,83"/>
+</map>

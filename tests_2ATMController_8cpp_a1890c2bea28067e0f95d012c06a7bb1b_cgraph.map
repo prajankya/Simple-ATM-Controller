@@ -1,0 +1,17 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node2" href="$classBank.html#aa0f6b03aa5383d1cd5bd877f7dcc88f9" title="Add a new Account (Only move constructor) " alt="" coords="143,5,274,32"/>
+<area shape="rect" id="node3" href="$classATMController.html#a021bf77cda238dd68aede20818ecb5b4" title="Get the Current State of ATMController. " alt="" coords="125,56,292,83"/>
+<area shape="rect" id="node4" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="356,259,551,285"/>
+<area shape="rect" id="node5" href="$classATMController.html#af446cdf61d051339db61abbdd839ebac" title="Insert Card. " alt="" coords="121,107,296,133"/>
+<area shape="rect" id="node7" href="$classATMController.html#af0cf99bd0903ca5e4a1fa8dea63c020e" title="Entering the pin for the given card (using InsertCard(cardNumber)) " alt="" coords="127,157,291,184"/>
+<area shape="rect" id="node9" href="$classATMController.html#a66508b85220af98f1564af784dc4338f" title="Choose a type of account. " alt="" coords="109,259,308,285"/>
+<area shape="rect" id="node10" href="$classATMController.html#ac81dfa7ab5e08db325ded04d2c43bd34" title="Deposit amount to the current account. " alt="" coords="129,309,288,336"/>
+<area shape="rect" id="node12" href="$classATMController.html#af434bb8b0bbfd1d2e0e0f1b6a7460b90" title="Get the Balance of the current account. " alt="" coords="117,360,300,387"/>
+<area shape="rect" id="node14" href="$classATMController.html#a2506be8e706a6a4a47c2da4078f67f2e" title="Withdraw amount from the current account. " alt="" coords="124,411,293,437"/>
+<area shape="rect" id="node16" href="$classATMController.html#ab974db7e9f376e2c9beb8484fd69d0d4" title="Ejecting the current card. " alt="" coords="123,461,295,488"/>
+<area shape="rect" id="node6" href="$classBank.html#a325ab2b6f254d3896f913e3c23f664d2" title="Allows to check if a cardNumber is connected to known accountss. " alt="" coords="380,107,527,133"/>
+<area shape="rect" id="node8" href="$classBank.html#afef2b783c0d96fb8fb00d587c32d4097" title="Allows to check if the pin is valid for the account with cardNumber. " alt="" coords="395,157,512,184"/>
+<area shape="rect" id="node11" href="$classBank.html#ab2eb11efdae43b920642bc80d4157253" title="Deposit amount to type in the account with cardNumber. " alt="" coords="401,309,506,336"/>
+<area shape="rect" id="node13" href="$classBank.html#a00ba74161d70b3d35092dd3597c4ac21" title="Get Balance of type of account with cardNumber. " alt="" coords="389,360,517,387"/>
+<area shape="rect" id="node15" href="$classBank.html#a9f73deabcbe1faace7a15e9adb5ee113" title="Withdraw amount from type from the account with cardNumber. " alt="" coords="396,411,511,437"/>
+</map>

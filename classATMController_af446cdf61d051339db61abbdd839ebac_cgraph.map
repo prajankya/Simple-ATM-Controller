@@ -1,0 +1,4 @@
+<map id="ATMController::InsertCard" name="ATMController::InsertCard">
+<area shape="rect" id="node2" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="228,5,423,32"/>
+<area shape="rect" id="node3" href="$classBank.html#a325ab2b6f254d3896f913e3c23f664d2" title="Allows to check if a cardNumber is connected to known accountss. " alt="" coords="252,56,399,83"/>
+</map>

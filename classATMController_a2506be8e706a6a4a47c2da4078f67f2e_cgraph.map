@@ -1,0 +1,4 @@
+<map id="ATMController::Withdraw" name="ATMController::Withdraw">
+<area shape="rect" id="node2" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="223,5,417,32"/>
+<area shape="rect" id="node3" href="$classBank.html#a9f73deabcbe1faace7a15e9adb5ee113" title="Withdraw amount from type from the account with cardNumber. " alt="" coords="263,56,377,83"/>
+</map>

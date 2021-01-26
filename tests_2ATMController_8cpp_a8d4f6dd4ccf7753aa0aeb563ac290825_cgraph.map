@@ -1,0 +1,5 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node2" href="$classATMController.html#af446cdf61d051339db61abbdd839ebac" title="Insert Card. " alt="" coords="109,31,284,57"/>
+<area shape="rect" id="node3" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="332,5,527,32"/>
+<area shape="rect" id="node4" href="$classBank.html#a325ab2b6f254d3896f913e3c23f664d2" title="Allows to check if a cardNumber is connected to known accountss. " alt="" coords="356,56,503,83"/>
+</map>

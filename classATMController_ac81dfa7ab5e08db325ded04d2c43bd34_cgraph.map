@@ -1,0 +1,4 @@
+<map id="ATMController::Deposit" name="ATMController::Deposit">
+<area shape="rect" id="node2" href="$classATMController.html#a67f38b3362704d0f20474029729ad635" title="Get a String representation of given state. " alt="" coords="212,5,407,32"/>
+<area shape="rect" id="node3" href="$classBank.html#ab2eb11efdae43b920642bc80d4157253" title="Deposit amount to type in the account with cardNumber. " alt="" coords="257,56,362,83"/>
+</map>

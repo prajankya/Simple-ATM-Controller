@@ -1,0 +1,9 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node2" href="$classAccount.html#aa761dc1b00ac3b645f07d6a4b92cddaf" title="Get Balance of the given type of account. " alt="" coords="109,107,256,133"/>
+<area shape="rect" id="node6" href="$classAccount.html#a893fb81b51cf44ad597f0b1b7feaf094" title="Deposit amount to type of account. " alt="" coords="121,5,244,32"/>
+<area shape="rect" id="node8" href="$classAccount.html#a12dad91df031830606f190fe7655d5d3" title="Withdraw amount from type of account. " alt="" coords="116,56,249,83"/>
+<area shape="rect" id="node3" href="$classAccount.html#ac682bcc14537c0b67b807a0cc7bd938f" title="Allows to check if the pin is valid for the current account. " alt="" coords="336,56,471,83"/>
+<area shape="rect" id="node4" href="$classAccountType.html#a9aefd97f88dcc6f256e3fccd006995d2" title="Get the Balance of this account type. " alt="" coords="316,107,491,133"/>
+<area shape="rect" id="node5" href="$classAccountType.html#ac3e6049e60420981698c7f1f33ab8bef" title="AccountType::Validate" alt="" coords="551,56,705,83"/>
+<area shape="rect" id="node7" href="$classAccountType.html#aab0baf2459b2b801eaf00ef4f6de6784" title="Add Transaction. " alt="" coords="304,5,503,32"/>
+</map>

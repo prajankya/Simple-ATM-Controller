@@ -1,0 +1,5 @@
+<map id="Account::GetBalance" name="Account::GetBalance">
+<area shape="rect" id="node2" href="$classAccount.html#ac682bcc14537c0b67b807a0cc7bd938f" title="Allows to check if the pin is valid for the current account. " alt="" coords="220,5,355,32"/>
+<area shape="rect" id="node3" href="$classAccountType.html#a9aefd97f88dcc6f256e3fccd006995d2" title="Get the Balance of this account type. " alt="" coords="200,56,375,83"/>
+<area shape="rect" id="node4" href="$classAccountType.html#ac3e6049e60420981698c7f1f33ab8bef" title="AccountType::Validate" alt="" coords="423,56,577,83"/>
+</map>

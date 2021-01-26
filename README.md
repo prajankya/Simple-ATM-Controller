@@ -5,6 +5,18 @@ Coding Assessment
 
 ![Demo SVG](https://raw.githubusercontent.com/prajankya/Simple-ATM-Controller/main/demo.svg)
 
+
+## Documentation
+
+Full Project documentation can be found at
+
+https://prajankya.github.io/Simple-ATM-Controller/
+
+The main class developed for this assessment is documented at
+
+https://prajankya.github.io/Simple-ATM-Controller/classATMController.html
+
+
 ## Installing
 
 **Step 1:** Requirements
@@ -59,6 +71,9 @@ Run the following command from inside the build folder:
 ```shell
 ctest
 ```
+
+![Test SVG](https://raw.githubusercontent.com/prajankya/Simple-ATM-Controller/main/test.svg)
+
 
 ## Developing
 

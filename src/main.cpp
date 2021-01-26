@@ -39,12 +39,8 @@ int main() {
           std::cout << "Enter card number (12 digit numeric, no spaces): ";
           std::string cardNumber;
           std::cin >> cardNumber;
-          try {
-              atm1.InsertCard(cardNumber);
-              std::cout << "\n\033[0;32m[SUCCESS] Card inserted!\033[0m\n";
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.InsertCard(cardNumber);
+          std::cout << "\n\033[0;32m[SUCCESS] Card inserted!\033[0m\n";
       })));
 
     /*=============== Enter Pin ===============*/
@@ -53,12 +49,8 @@ int main() {
           std::cout << "Enter pin (6 digit numeric, no spaces): ";
           std::string pin;
           std::cin >> pin;
-          try {
-              atm1.EnterPin(pin);
-              std::cout << "\n\033[0;32m[SUCCESS] Pin verified!\033[0m\n";
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.EnterPin(pin);
+          std::cout << "\n\033[0;32m[SUCCESS] Pin verified!\033[0m\n";
       })));
 
     /*=============== Select Account ===============*/
@@ -67,26 +59,16 @@ int main() {
 
     select_account_menu.add_item(
       std::unique_ptr<menu_item>(new text_menu_item("Savings Account", [&atm1] {
-          try {
-              atm1.SelectAccount(Account::TYPE::TYPE_SAVING);
-              std::cout
-                << "\n\033[0;32m[SUCCESS] Savings account selected.\033[0m"
-                << std::endl;
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.SelectAccount(Account::TYPE::TYPE_SAVING);
+          std::cout << "\n\033[0;32m[SUCCESS] Savings account selected.\033[0m"
+                    << std::endl;
       })));
 
     select_account_menu.add_item(std::unique_ptr<menu_item>(
       new text_menu_item("Checking Account", [&atm1] {
-          try {
-              atm1.SelectAccount(Account::TYPE::TYPE_SAVING);
-              std::cout
-                << "\n\033[0;32m[SUCCESS] Checking account selected.\033[0m"
-                << std::endl;
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.SelectAccount(Account::TYPE::TYPE_SAVING);
+          std::cout << "\n\033[0;32m[SUCCESS] Checking account selected.\033[0m"
+                    << std::endl;
       })));
 
     main_menu.add_item(std::unique_ptr<menu_item>(
@@ -95,13 +77,9 @@ int main() {
     /*=============== Get Balance ===============*/
     main_menu.add_item(
       std::unique_ptr<menu_item>(new text_menu_item("Get Balance", [&atm1] {
-          try {
-              auto balance = atm1.GetBalance();
-              std::cout << "\n\033[0;32m[SUCCESS] Account balance: " << balance
-                        << "\033[0m" << std::endl;
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          auto balance = atm1.GetBalance();
+          std::cout << "\n\033[0;32m[SUCCESS] Account balance: " << balance
+                    << "\033[0m" << std::endl;
       })));
 
     /*=============== Deposit ===============*/
@@ -110,12 +88,8 @@ int main() {
           std::cout << "Enter amount to deposit(numeric, whole numbers): ";
           long long amount;
           std::cin >> amount;
-          try {
-              atm1.Deposit(amount);
-              std::cout << "\n\033[0;32m[SUCCESS] Amount deposited.\033[0m\n";
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.Deposit(amount);
+          std::cout << "\n\033[0;32m[SUCCESS] Amount deposited.\033[0m\n";
       })));
 
     /*=============== Withdraw ===============*/
@@ -124,23 +98,15 @@ int main() {
           std::cout << "Enter amount to withdraw(numeric, whole numbers): ";
           long long amount;
           std::cin >> amount;
-          try {
-              atm1.Withdraw(amount);
-              std::cout << "\n\033[0;32m[SUCCESS] Amount withdrawn.\033[0m\n";
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.Withdraw(amount);
+          std::cout << "\n\033[0;32m[SUCCESS] Amount withdrawn.\033[0m\n";
       })));
 
     /*=============== Eject Card ===============*/
     main_menu.add_item(
       std::unique_ptr<menu_item>(new text_menu_item("Eject Card", [&atm1] {
-          try {
-              atm1.EjectCard();
-              std::cout << "\n\033[0;32m[SUCCESS] Card Ejected.\033[0m\n";
-          } catch (const std::exception& e) {
-              std::cout << "\n\033[0;31m[ERROR] " << e.what() << "\033[0m\n";
-          }
+          atm1.EjectCard();
+          std::cout << "\n\033[0;32m[SUCCESS] Card Ejected.\033[0m\n";
       })));
 
     main_menu.run();
